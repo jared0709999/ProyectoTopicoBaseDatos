@@ -1,0 +1,34 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<html lang="">
+
+<div class="wrapper row4">
+  <section class="hoc container clear">
+
+    <h1>Directorio de Khamadi</h1>
+
+    <div class="row" style="">
+      
+    
+      <div class ="col-4"  align="center">
+        {% for directorio in directorioList %}
+        <div class = "card-body bg-light">
+          <h5><a href="#">{{ encargado.nombre}}</a></h5>
+          <img src="{{encargado.foto}}" style="height: 200x; width: 700px; object-fit: cover" alt="">
+          <div>
+            <em>Tipo </em> <p> {{encargado.type}} </p> 
+          </div>
+          <div class = "card-footer">
+        <button class = "btn btn-primaty">Conoce más</button> <br><br>
+      </div>
+       </div>
+       {% endfor %}
+      </div>
+
+    </div>
+  </section>
+</div>
+</html>
